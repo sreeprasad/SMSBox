@@ -29,6 +29,7 @@ def convert_text_to_comment():
   box_comment = {'message' : message}
   #build the request to send to box
   url = "https://api.box.com/2.0/files/%s/comments" % os.environ['BOX_FILE']
+  print url
   headers = {'Authorization' : 'BoxAuth api_key=%s&auth_token=%s' % (os.environ['BOX_API_KEY'], os.environ['BOX_AUTH_TOKEN'])}
   #send the request
   r = requests.post(url, data=json.dumps(box_comment), headers=headers)
