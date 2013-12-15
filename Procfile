@@ -1,1 +1,1 @@
-web: gunicorn newapp:app
+web: gunicorn text-thread:app
