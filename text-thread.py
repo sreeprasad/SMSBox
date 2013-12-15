@@ -16,13 +16,7 @@ def helloagain():
 
 @app.route('/twilio', methods=['GET'])
 def convert_text_to_comment():
-  """
-  Twilio will post any texts it receives
-  to this endpoint. We will do the following:
-  -Get the text message from Twilio
-  -Convert it into a Box comment object
-  -Send the comment to Box
-  """
+   
   #Get the text message sent by Twilio
   message = request.args.get('Body')
   #Set up the comment to send to box
