@@ -8,7 +8,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-	return "Hello world from Sreeprasad !"
+  
+  hello ="hello"
+  print hellohea 
+  return "Hello world from Sreeprasad !"
 
 @app.route('/mytwilio', methods=['GET'])
 def helloagain():
@@ -19,12 +22,13 @@ def convert_text_to_comment():
    
   #Get the text message sent by Twilio
   message = "this is test"
+  print "message"
   #Set up the comment to send to box
   box_comment = {'message' : message}
   #build the request to send to box
   url = "https://api.box.com/2.0/files/12184423458/comments"
   print url
-  headers = {'Authorization' : 'Bearer api_key=mzrvf2b0vupf8375p5ajke7izeb38ql8&auth_token=DD59aunIHmrTT2rYKQQB3Q9ikeVWlEv0'}
+  headers = {'Authorization' : 'Bearer DD59aunIHmrTT2rYKQQB3Q9ikeVWlEv0'}
   print headers
   #send the request
   r = requests.post(url, data=json.dumps(box_comment), headers=headers)
